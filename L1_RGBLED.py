@@ -3,11 +3,11 @@
 import L1_gpio as gpio
 
 #define variables
-State = 0
-gpioport = 0  #gpio port 0 needs to be configured to output on Beaglebone
+state = 0
+gpioport = 0   #gpio port 0 needs to be configured to output on Beaglebone
 
 #functions
-def LEDState(State, gpioport):      #takes the current step and gpioport and outputs the appropriate stepper values 
+def LEDState(state, gpioport):      #takes the current step and gpioport and outputs the appropriate stepper values 
     if state == 1:                  #Seeking state            
         gpio.write(gpioport, 0, 0)
         gpio.write(gpioport, 1, 0)
